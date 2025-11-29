@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Rivera - Full Stack Developer",
-  description: "Portfolio of Alex Rivera, a passionate full-stack developer specializing in React, TypeScript, and Node.js",
+  title: "Tarik Silva Peña - Full Stack Developer",
+  description: "Work of Tarik Silva Peña, a full-stack developer dedicated to performance, quality, and user experience.",
 };
 
 export default function RootLayout({

@@ -6,6 +6,7 @@ import { AnimatedGridPattern } from '@/components/ui/animated-grid-pattern';
 import { ShimmerButton } from '@/components/ui/shimmer-button';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/components/LanguageProvider';
+import { TypingAnimation } from '@/components/ui/TypingAnimation';
 
 const iconMap: Record<string, any> = {
     Mail,
@@ -41,9 +42,11 @@ export default function HeroSection() {
                 </div>
 
                 {/* Name and Role */}
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                    {personalInfo.name}
-                </h1>
+                {/* Name and Role */}
+                <TypingAnimation
+                    text={personalInfo.name}
+                    className="text-5xl md:text-7xl font-bold tracking-tight mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent"
+                />
                 <p className="text-xl md:text-2xl text-muted-foreground mb-6">
                     {personalInfo.role}
                 </p>

@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 import { Meteors } from '@/components/ui/meteors';
 import { useLanguage } from '@/components/LanguageProvider';
+import { calculateDuration } from '@/lib/date-utils';
 
 export default function ExperienceSection() {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     return (
         <section className="relative py-24 px-6 max-w-5xl mx-auto overflow-hidden" id="experience">
@@ -58,7 +59,10 @@ export default function ExperienceSection() {
                                     </span>
                                 )}
                             </div>
-                            <p className="text-sm text-muted-foreground mb-3">{exp.duration}</p>
+                            <p className="text-sm text-muted-foreground mb-1">{exp.duration}</p>
+                            <p className="text-sm text-primary/80 font-medium mb-3">
+                                {calculateDuration(exp.startDate, exp.endDate, language)}
+                            </p>
                             <p className="text-muted-foreground">{exp.description}</p>
                         </div>
                     </motion.div>

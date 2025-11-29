@@ -18,6 +18,8 @@ export interface Experience {
   duration: string;
   description: string;
   current: boolean;
+  startDate: string; // Format: 'YYYY-MM'
+  endDate?: string; // Format: 'YYYY-MM' or undefined if current
 }
 
 export interface Skill {
@@ -41,4 +43,13 @@ export interface PersonalInfo {
   email: string;
   avatar: string;
   resumeUrl: string;
+}
+
+export interface Certificate {
+  id: string;
+  name: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
+  image?: string;
 }

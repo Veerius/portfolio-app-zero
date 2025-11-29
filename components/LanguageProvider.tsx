@@ -16,12 +16,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
     en: {
         // Hero Section
-        'hero.tagline': 'Building beautiful, performant web experiences',
+        'hero.tagline': 'Full-stack developer dedicated to performance, quality, and user experience.',
         'hero.contact': 'Contact Me',
         'hero.download': 'Download CV',
 
         // About Section
         'about.title': 'About Me',
+        'about.bio': 'I am a full-stack developer with over 5 years of combined experience in software development, web applications, and system administration. I have worked in both local and international environments, contributing to backend, frontend, and infrastructure-related projects. My background includes modern technologies, SQL databases, and development best practices, with a strong focus on efficiency, code quality, and continuous improvement.',
         'about.skills': 'Skills & Technologies',
 
         // Projects Section
@@ -52,12 +53,13 @@ const translations = {
     },
     es: {
         // Hero Section
-        'hero.tagline': 'Construyendo experiencias web hermosas y eficientes',
+        'hero.tagline': 'Desarrollador full-stack orientado a rendimiento, calidad y experiencia de usuario.',
         'hero.contact': 'Contáctame',
         'hero.download': 'Descargar CV',
 
         // About Section
         'about.title': 'Sobre Mí',
+        'about.bio': 'Soy un desarrollador full-stack con más de 5 años de experiencia combinada en desarrollo de software, aplicaciones web y administración de sistemas. He trabajado en entornos locales e internacionales, contribuyendo a proyectos de backend, frontend, gestión de infraestructura y soporte técnico. Mi trayectoria incluye el uso de tecnologías modernas, bases de datos SQL y buenas prácticas de desarrollo, con un enfoque en la eficiencia, la calidad del código y la mejora continua.',
         'about.skills': 'Habilidades y Tecnologías',
 
         // Projects Section
@@ -74,7 +76,7 @@ const translations = {
 
         // Contact Section
         'contact.title': 'Ponte en Contacto',
-        'contact.subtitle': 'Siempre estoy abierto a nuevas oportunidades y colaboraciones',
+        'contact.subtitle': 'Siempre estoy abierto a nuevas oportunidades',
         'contact.send': 'Envíame un correo',
         'contact.connect': 'O conéctate conmigo en',
 

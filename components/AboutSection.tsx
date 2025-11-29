@@ -1,6 +1,6 @@
 'use client';
 
-import { personalInfo, skills } from '@/data/portfolio';
+import { skills } from '@/data/portfolio';
 import { BentoGrid, BentoCard } from '@/components/BentoGrid';
 import * as LucideIcons from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -20,11 +20,11 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="relative z-10"
+                className="relative z-10 text-center"
             >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('about.title')}</h2>
-                <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
-                    {personalInfo.bio}
+                <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
+                    {t('about.bio')}
                 </p>
             </motion.div>
 
@@ -35,7 +35,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="relative z-10"
             >
-                <h3 className="text-2xl font-semibold mb-6">{t('about.skills')}</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-center">{t('about.skills')}</h3>
                 <BentoGrid>
                     {skills.map((skill, index) => {
                         const Icon = (LucideIcons as any)[skill.icon] || LucideIcons.Code2;

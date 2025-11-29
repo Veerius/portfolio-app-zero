@@ -1,11 +1,11 @@
-import { PersonalInfo, Project, Experience, Skill, SocialLink } from '@/types';
+import { PersonalInfo, Project, Experience, Skill, SocialLink, Certificate } from '@/types';
 
 export const personalInfo: PersonalInfo = {
-    name: 'Alex Rivera',
+    name: 'Tarik Silva Peña',
     role: 'Full Stack Developer',
     tagline: 'Building beautiful, performant web experiences',
-    bio: 'Passionate full-stack developer with 5+ years of experience creating modern web applications. Specialized in React, TypeScript, and Node.js. I love turning complex problems into simple, elegant solutions.',
-    email: 'alex.rivera@example.com',
+    bio: 'Passionate full-stack developer with experience creating modern web applications. Specialized in React, TypeScript, and Node.js. I love turning complex problems into simple, elegant solutions.',
+    email: 'silvatarik.dev@gmail.com',
     avatar: '/avatar.jpg',
     resumeUrl: '/resume.pdf',
 };
@@ -13,17 +13,17 @@ export const personalInfo: PersonalInfo = {
 export const socialLinks: SocialLink[] = [
     {
         name: 'GitHub',
-        url: 'https://github.com/alexrivera',
+        url: 'https://github.com/silvatarik',
         icon: 'Github',
     },
     {
         name: 'LinkedIn',
-        url: 'https://linkedin.com/in/alexrivera',
+        url: 'https://linkedin.com/in/silvatarik',
         icon: 'Linkedin',
     },
     {
         name: 'Email',
-        url: 'mailto:alex.rivera@example.com',
+        url: 'mailto:silvatarik.dev@gmail.com',
         icon: 'Mail',
     },
 ];
@@ -93,28 +93,15 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
     {
         id: '1',
-        company: 'TechCorp Solutions',
-        role: 'Senior Full Stack Developer',
-        duration: '2022 - Present',
-        description: 'Leading development of enterprise web applications using React, Node.js, and AWS. Mentoring junior developers and architecting scalable solutions.',
+        company: 'Contactel Teleservicios, SA',
+        role: 'Desarrollo',
+        duration: 'Oct 2021 - Actualidad',
+        description: 'Desarrollo de aplicaciones web y soluciones tecnológicas. Trabajo con tecnologías modernas para crear experiencias de usuario eficientes y escalables.',
         current: true,
+        startDate: '2021-10',
+        endDate: undefined, // Current position
     },
-    {
-        id: '2',
-        company: 'StartupXYZ',
-        role: 'Full Stack Developer',
-        duration: '2020 - 2022',
-        description: 'Built and maintained multiple client-facing applications. Implemented CI/CD pipelines and improved application performance by 40%.',
-        current: false,
-    },
-    {
-        id: '3',
-        company: 'Digital Agency Co',
-        role: 'Frontend Developer',
-        duration: '2019 - 2020',
-        description: 'Developed responsive websites and web applications for various clients. Collaborated with designers to create pixel-perfect implementations.',
-        current: false,
-    },
+    // Puedes añadir más experiencias aquí
 ];
 
 export const skills: Skill[] = [
@@ -128,4 +115,32 @@ export const skills: Skill[] = [
     { id: '8', name: 'Git', icon: 'GitBranch', category: 'tools' },
     { id: '9', name: 'Docker', icon: 'Box', category: 'tools' },
     { id: '10', name: 'AWS', icon: 'Cloud', category: 'tools' },
+];
+
+export const certificates: Certificate[] = [
+    {
+        id: '1',
+        name: 'React - The Complete Guide',
+        issuer: 'Udemy',
+        date: '2023',
+        credentialUrl: '#',
+        image: '/certificates/react.jpg',
+    },
+    {
+        id: '2',
+        name: 'Advanced TypeScript',
+        issuer: 'Frontend Masters',
+        date: '2023',
+        credentialUrl: '#',
+        image: '/certificates/typescript.jpg',
+    },
+    {
+        id: '3',
+        name: 'AWS Certified Developer',
+        issuer: 'Amazon Web Services',
+        date: '2022',
+        credentialUrl: '#',
+        image: '/certificates/aws.jpg',
+    },
+    // Añade tus certificados reales aquí
 ];
