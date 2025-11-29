@@ -6,6 +6,7 @@ import { Briefcase } from 'lucide-react';
 import { Meteors } from '@/components/ui/meteors';
 import { useLanguage } from '@/components/LanguageProvider';
 import { calculateDuration } from '@/lib/date-utils';
+import { cn } from '@/lib/utils';
 
 export default function ExperienceSection() {
     const { t, language } = useLanguage();
@@ -28,7 +29,7 @@ export default function ExperienceSection() {
                 </p>
             </motion.div>
 
-            <div className="space-y-8 relative z-10">
+            <div className="relative z-10 ml-4">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={exp.id}
@@ -36,18 +37,30 @@ export default function ExperienceSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="relative pl-8 border-l-2 border-border pb-8 last:pb-0"
+                        className="relative pl-8 border-l-2 border-border pb-12 last:pb-0 last:border-l-transparent"
                     >
-                        {/* Timeline dot */}
-                        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+                        {index === experiences.length - 1 && (
+                            <div className="absolute left-[-2px] top-0 h-6 w-[2px] bg-border" />
+                        )}
+
+                        <div
+                            className={cn(
+                                'absolute -left-[9px] bg-background flex items-center justify-center rounded-full border-2 border-primary',
+                                index === 0 ? 'w-8 h-8 -left-[17px] top-0' : 'w-4 h-4 top-2'
+                            )}
+                        >
+                            {index === 0 && <Briefcase className="w-4 h-4 text-primary" />}
+                        </div>
 
                         {/* Content */}
-                        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className={cn("rounded-2xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow", index === 0 ? "mt-1" : "")}>
                             <div className="flex items-start justify-between mb-2">
                                 <div className="flex items-center gap-3">
-                                    <div className="p-2 rounded-lg bg-primary/10">
-                                        <Briefcase className="h-5 w-5 text-primary" />
-                                    </div>
+                                    {index !== 0 && (
+                                        <div className="p-2 rounded-lg bg-primary/10">
+                                            <Briefcase className="h-5 w-5 text-primary" />
+                                        </div>
+                                    )}
                                     <div>
                                         <h3 className="text-xl font-semibold">{exp.role}</h3>
                                         <p className="text-muted-foreground">{exp.company}</p>

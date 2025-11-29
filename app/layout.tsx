@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import Navigation from "@/components/Navigation";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           <LanguageProvider>
             <Navigation />
             {children}
+            <ScrollToTop />
           </LanguageProvider>
         </ThemeProvider>
       </body>

@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
     name: 'Tarik Silva Peña',
     role: 'Full Stack Developer',
     tagline: 'Building beautiful, performant web experiences',
-    bio: 'Passionate full-stack developer with experience creating modern web applications. Specialized in React, TypeScript, and Node.js. I love turning complex problems into simple, elegant solutions.',
+    bio: 'I am a full-stack developer with over 5 years of combined experience in software development, web applications, and system administration. I have worked in both local and international environments, contributing to backend, frontend, and infrastructure-related projects. My background includes modern technologies, SQL databases, and development best practices, with a strong focus on efficiency, code quality, and continuous improvement.',
     email: 'silvatarik.dev@gmail.com',
     avatar: '/avatar.jpg',
     resumeUrl: '/resume.pdf',
@@ -13,7 +13,7 @@ export const personalInfo: PersonalInfo = {
 export const socialLinks: SocialLink[] = [
     {
         name: 'GitHub',
-        url: 'https://github.com/silvatarik',
+        url: 'https://github.com/Veerius',
         icon: 'Github',
     },
     {
@@ -23,7 +23,7 @@ export const socialLinks: SocialLink[] = [
     },
     {
         name: 'Email',
-        url: 'mailto:silvatarik.dev@gmail.com',
+        url: 'mailto:silvatarikt@outlook.com',
         icon: 'Mail',
     },
 ];
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         techStack: ['React', 'TypeScript', 'OpenWeather API', 'Chart.js'],
         githubUrl: 'https://github.com/alexrivera/weather',
         liveUrl: 'https://weather-demo.vercel.app',
-        featured: false,
+        featured: true,
         size: 'small',
     },
     {
@@ -85,7 +85,7 @@ export const projects: Project[] = [
         image: '/projects/ai-chat.jpg',
         techStack: ['Next.js', 'OpenAI API', 'Langchain', 'Pinecone', 'TypeScript'],
         githubUrl: 'https://github.com/alexrivera/ai-chat',
-        featured: false,
+        featured: true,
         size: 'small',
     },
 ];
@@ -99,9 +99,48 @@ export const experiences: Experience[] = [
         description: 'Desarrollo de aplicaciones web y soluciones tecnológicas. Trabajo con tecnologías modernas para crear experiencias de usuario eficientes y escalables.',
         current: true,
         startDate: '2021-10',
-        endDate: undefined, // Current position
+        endDate: undefined,
     },
-    // Puedes añadir más experiencias aquí
+    {
+        id: '2',
+        company: 'Grupo Pérez Moreno',
+        role: 'Administrador de Sistemas',
+        duration: 'Oct 2020 - Ene 2021',
+        description: 'Administración de sistemas e infraestructura IT. Gestión de incidencias técnicas, mantenimiento de servidores y soporte a usuarios para garantizar la continuidad operativa.',
+        current: false,
+        startDate: '2020-10',
+        endDate: '2021-01',
+    },
+    {
+        id: '3',
+        company: '7ebiz International (Gran Canaria)',
+        role: 'Desarrollador Web',
+        duration: 'Ene 2020 - Mar 2020',
+        description: 'Desarrollo y mantenimiento de aplicaciones web utilizando el framework Laravel. Colaboración directa con clientes para traducir requerimientos de negocio en soluciones técnicas eficientes.',
+        current: false,
+        startDate: '2020-01',
+        endDate: '2020-03',
+    },
+    {
+        id: '4',
+        company: 'Company ISKRA (Eslovenia)',
+        role: 'Desarrollador Web',
+        duration: 'Abr 2019 - Jul 2019',
+        description: 'Desarrollo full-stack de aplicaciones web a medida. Implementación principal en PHP con componentes especializados en Java, asegurando soluciones robustas y escalables.',
+        current: false,
+        startDate: '2019-04',
+        endDate: '2019-07',
+    },
+    {
+        id: '5',
+        company: 'Datacomp Sp. z o.o. (Polonia)',
+        role: 'Desarrollador C#',
+        duration: 'Abr 2017 - Jul 2017',
+        description: 'Desarrollo de plugins y extensiones en C# utilizando Visual Studio para potenciar las aplicaciones corporativas, optimizando flujos de trabajo internos.',
+        current: false,
+        startDate: '2017-04',
+        endDate: '2017-07',
+    },
 ];
 
 export const skills: Skill[] = [
@@ -114,7 +153,8 @@ export const skills: Skill[] = [
     { id: '7', name: 'TailwindCSS', icon: 'Palette', category: 'frontend' },
     { id: '8', name: 'Git', icon: 'GitBranch', category: 'tools' },
     { id: '9', name: 'Docker', icon: 'Box', category: 'tools' },
-    { id: '10', name: 'AWS', icon: 'Cloud', category: 'tools' },
+    { id: '10', name: 'Rust', icon: 'Cpu', category: 'frontend' },
+    { id: '11', name: 'Java', icon: 'Coffee', category: 'backend' },
 ];
 
 export const certificates: Certificate[] = [
@@ -142,5 +182,4 @@ export const certificates: Certificate[] = [
         credentialUrl: '#',
         image: '/certificates/aws.jpg',
     },
-    // Añade tus certificados reales aquí
 ];

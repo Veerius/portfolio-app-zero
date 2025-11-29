@@ -7,6 +7,7 @@ import { ShimmerButton } from '@/components/ui/shimmer-button';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/components/LanguageProvider';
 import { TypingAnimation } from '@/components/ui/TypingAnimation';
+import { Button } from './ui/button';
 
 const iconMap: Record<string, any> = {
     Mail,
@@ -71,6 +72,24 @@ export default function HeroSection() {
                         <Download className="mr-2 h-4 w-4" />
                         {t('hero.download')}
                     </a>
+                </div>
+
+                {/* Navigation Shortcuts */}
+                <div className="flex flex-wrap gap-4 justify-center items-center mb-12">
+                    <Button
+                        variant="outline"
+                        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="rounded-full"
+                    >
+                        {t('nav.projects')}
+                    </Button>
+                    <Button
+                        variant="outline"
+                        onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="rounded-full"
+                    >
+                        {t('nav.experience')}
+                    </Button>
                 </div>
 
                 {/* Social Links */}
