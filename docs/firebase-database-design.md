@@ -217,7 +217,7 @@ analytics/{analyticsId}
   id: string;
   userId: string;
   type: 'page_view' | 'project_view' | 'contact_click' | 'download_cv';
-  resourceId?: string; // ID of project, post, etc.
+  resourceId?: string;
   timestamp: Timestamp;
   metadata: {
     userAgent?: string;

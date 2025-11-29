@@ -62,7 +62,9 @@ export default function ExperienceSection() {
                                         </div>
                                     )}
                                     <div>
-                                        <h3 className="text-xl font-semibold">{exp.role}</h3>
+                                        <h3 className="text-xl font-semibold">
+                                            {language === 'en' ? (exp.roleEn || exp.role) : exp.role}
+                                        </h3>
                                         <p className="text-muted-foreground">{exp.company}</p>
                                     </div>
                                 </div>
@@ -76,7 +78,9 @@ export default function ExperienceSection() {
                             <p className="text-sm text-primary/80 font-medium mb-3">
                                 {calculateDuration(exp.startDate, exp.endDate, language)}
                             </p>
-                            <p className="text-muted-foreground">{exp.description}</p>
+                            <p className="text-muted-foreground">
+                                {language === 'en' ? (exp.descriptionEn || exp.description) : exp.description}
+                            </p>
                         </div>
                     </motion.div>
                 ))}

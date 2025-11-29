@@ -9,6 +9,9 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   size?: 'small' | 'medium' | 'large';
+  titleEn?: string;
+  descriptionEn?: string;
+  longDescriptionEn?: string;
 }
 
 export interface Experience {
@@ -20,6 +23,8 @@ export interface Experience {
   current: boolean;
   startDate: string; // Format: 'YYYY-MM'
   endDate?: string; // Format: 'YYYY-MM' or undefined if current
+  descriptionEn?: string;
+  roleEn?: string;
 }
 
 export interface Skill {
