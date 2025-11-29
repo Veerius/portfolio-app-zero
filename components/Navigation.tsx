@@ -3,7 +3,8 @@
 import { useTheme } from './ThemeProvider';
 import { useLanguage } from './LanguageProvider';
 import { Moon, Sun, Monitor, Languages } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { useClickOutside } from '@/hooks/use-click-outside';
 
 export default function Navigation() {
     const { theme, setTheme } = useTheme();
@@ -11,11 +12,17 @@ export default function Navigation() {
     const [showThemeMenu, setShowThemeMenu] = useState(false);
     const [showLangMenu, setShowLangMenu] = useState(false);
 
+    const langMenuRef = useRef<HTMLDivElement>(null);
+    const themeMenuRef = useRef<HTMLDivElement>(null);
+
+    useClickOutside(langMenuRef, () => setShowLangMenu(false));
+    useClickOutside(themeMenuRef, () => setShowThemeMenu(false));
+
     return (
         <nav className="fixed top-0 right-0 z-50 p-6">
             <div className="flex items-center gap-3">
                 {/* Language Switcher */}
-                <div className="relative">
+                <div className="relative" ref={langMenuRef}>
                     <button
                         onClick={() => setShowLangMenu(!showLangMenu)}
                         className="p-3 rounded-full border border-border bg-card/80 backdrop-blur-sm hover:bg-accent transition-colors"
@@ -51,7 +58,7 @@ export default function Navigation() {
                 </div>
 
                 {/* Theme Switcher */}
-                <div className="relative">
+                <div className="relative" ref={themeMenuRef}>
                     <button
                         onClick={() => setShowThemeMenu(!showThemeMenu)}
                         className="p-3 rounded-full border border-border bg-card/80 backdrop-blur-sm hover:bg-accent transition-colors"
