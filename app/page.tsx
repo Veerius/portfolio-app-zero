@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import ExperienceSection from '@/components/ExperienceSection';
-import EducationSection from '@/components/EducationSection';
-import CertificatesSection from '@/components/CertificatesSection';
-import ContactSection from '@/components/ContactSection';
-import { useLanguage } from '@/components/LanguageProvider';
+import HeroSection from '@/components/HeroSection'
+import AboutSection from '@/components/AboutSection'
+import ProjectsSection from '@/components/ProjectsSection'
+import ExperienceSection from '@/components/ExperienceSection'
+import EducationSection from '@/components/EducationSection'
+import CertificatesSection from '@/components/CertificatesSection'
+import ContactSection from '@/components/ContactSection'
+import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t } = useLanguage()
 
   return (
-    <main className="min-h-screen">
+    <main className='min-h-screen'>
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
@@ -23,11 +23,11 @@ export default function Home() {
       <ContactSection />
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-border">
-        <div className="max-w-7xl mx-auto text-center text-sm text-muted-foreground">
+      <footer className='py-8 px-6 border-t border-border'>
+        <div className='max-w-7xl mx-auto text-center text-sm text-muted-foreground'>
           <p>©Tarik Silva Peña. {t('footer.built')}</p>
         </div>
       </footer>
     </main>
-  );
+  )
 }

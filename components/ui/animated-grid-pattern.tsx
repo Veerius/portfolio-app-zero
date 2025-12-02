@@ -1,18 +1,11 @@
-"use client"
+'use client'
 
-import {
-  ComponentPropsWithoutRef,
-  useEffect,
-  useId,
-  useRef,
-  useState,
-} from "react"
-import { motion } from "motion/react"
+import { ComponentPropsWithoutRef, useEffect, useId, useRef, useState } from 'react'
+import { motion } from 'motion/react'
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils'
 
-export interface AnimatedGridPatternProps
-  extends ComponentPropsWithoutRef<"svg"> {
+export interface AnimatedGridPatternProps extends ComponentPropsWithoutRef<'svg'> {
   width?: number
   height?: number
   x?: number
@@ -63,9 +56,9 @@ export function AnimatedGridPattern({
       currentSquares.map((sq) =>
         sq.id === id
           ? {
-            ...sq,
-            pos: getPos(),
-          }
+              ...sq,
+              pos: getPos(),
+            }
           : sq
       )
     )
@@ -104,31 +97,20 @@ export function AnimatedGridPattern({
   return (
     <svg
       ref={containerRef}
-      aria-hidden="true"
+      aria-hidden='true'
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
+        'pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30',
         className
       )}
       {...props}
     >
       <defs>
-        <pattern
-          id={id}
-          width={width}
-          height={height}
-          patternUnits="userSpaceOnUse"
-          x={x}
-          y={y}
-        >
-          <path
-            d={`M.5 ${height}V.5H${width}`}
-            fill="none"
-            strokeDasharray={strokeDasharray}
-          />
+        <pattern id={id} width={width} height={height} patternUnits='userSpaceOnUse' x={x} y={y}>
+          <path d={`M.5 ${height}V.5H${width}`} fill='none' strokeDasharray={strokeDasharray} />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill={`url(#${id})`} />
-      <svg x={x} y={y} className="overflow-visible">
+      <rect width='100%' height='100%' fill={`url(#${id})`} />
+      <svg x={x} y={y} className='overflow-visible'>
         {squares.map(({ pos: [x, y], id }, index) => (
           <motion.rect
             initial={{ opacity: 0 }}
@@ -137,7 +119,7 @@ export function AnimatedGridPattern({
               duration,
               repeat: 1,
               delay: index * 0.1,
-              repeatType: "reverse",
+              repeatType: 'reverse',
             }}
             onAnimationComplete={() => updateSquarePosition(id)}
             key={`${x}-${y}-${index}`}
@@ -145,8 +127,8 @@ export function AnimatedGridPattern({
             height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
-            fill="currentColor"
-            strokeWidth="0"
+            fill='currentColor'
+            strokeWidth='0'
           />
         ))}
       </svg>
