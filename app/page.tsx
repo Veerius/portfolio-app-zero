@@ -10,7 +10,7 @@ import ContactSection from '@/components/ContactSection'
 import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Home() {
-  const { t } = useLanguage()
+  const { translate } = useLanguage()
 
   return (
     <main className='min-h-screen'>
@@ -25,7 +25,7 @@ export default function Home() {
       {/* Footer */}
       <footer className='py-8 px-6 border-t border-border'>
         <div className='max-w-7xl mx-auto text-center text-sm text-muted-foreground'>
-          <p>©Tarik Silva Peña. {t('footer.built')}</p>
+          <p>©Tarik Silva Peña. {translate('footer.built')}</p>
         </div>
       </footer>
     </main>

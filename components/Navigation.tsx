@@ -19,7 +19,7 @@ import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme()
-  const { language, setLanguage, t } = useLanguage()
+  const { language, setLanguage, translate } = useLanguage()
   const [showThemeMenu, setShowThemeMenu] = useState(false)
   const [showLangMenu, setShowLangMenu] = useState(false)
   const pathname = usePathname()
@@ -43,11 +43,11 @@ export default function Navigation() {
   }
 
   const navItems = [
-    { id: 'about', icon: User, label: t('nav.about') },
-    { id: 'projects', icon: FolderOpen, label: t('nav.projects') },
-    { id: 'experience', icon: Briefcase, label: t('nav.experience') },
-    { id: 'education', icon: GraduationCap, label: t('nav.education') },
-    { id: 'contact', icon: Mail, label: t('nav.contact') },
+    { id: 'about', icon: User, label: translate('nav.about') },
+    { id: 'projects', icon: FolderOpen, label: translate('nav.projects') },
+    { id: 'experience', icon: Briefcase, label: translate('nav.experience') },
+    { id: 'education', icon: GraduationCap, label: translate('nav.education') },
+    { id: 'contact', icon: Mail, label: translate('nav.contact') },
   ]
 
   return (

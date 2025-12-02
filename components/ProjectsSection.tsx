@@ -4,15 +4,15 @@ import { projects } from '@/data/portfolio'
 import { BentoGrid, BentoCard } from '@/components/BentoGrid'
 import { ExternalLink, Github, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { BorderBeam } from '@/components/ui/border-beam'
-import { Meteors } from '@/components/ui/meteors'
+import { BorderBeam } from '@/components/ui/BorderBeam'
+import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 import Link from 'next/link'
 
 const PROJECTS_TO_SHOW = 3
 
 export default function ProjectsSection() {
-  const { t, language } = useLanguage()
+  const { translate, language } = useLanguage()
   const featuredProjects = projects.slice(0, PROJECTS_TO_SHOW)
   const hasMoreProjects = projects.length > PROJECTS_TO_SHOW
 
@@ -27,8 +27,8 @@ export default function ProjectsSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className='text-4xl md:text-5xl font-bold mb-4'>{t('projects.title')}</h2>
-        <p className='text-lg text-muted-foreground mb-12'>{t('projects.subtitle')}</p>
+        <h2 className='text-4xl md:text-5xl font-bold mb-4'>{translate('projects.title')}</h2>
+        <p className='text-lg text-muted-foreground mb-12'>{translate('projects.subtitle')}</p>
       </motion.div>
 
       <BentoGrid>
@@ -97,7 +97,7 @@ export default function ProjectsSection() {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <Github className='h-4 w-4 mr-1' />
-                    {t('projects.code')}
+                    {translate('projects.code')}
                   </a>
                 )}
                 {project.liveUrl && (
@@ -109,7 +109,7 @@ export default function ProjectsSection() {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink className='h-4 w-4 mr-1' />
-                    {t('projects.demo')}
+                    {translate('projects.demo')}
                   </a>
                 )}
               </div>
@@ -131,7 +131,7 @@ export default function ProjectsSection() {
             href='/projects'
             className='inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium'
           >
-            {t('projects.viewAll')}
+            {translate('projects.viewAll')}
             <ArrowRight className='h-5 w-5' />
           </Link>
         </motion.div>

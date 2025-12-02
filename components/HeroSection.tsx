@@ -2,8 +2,8 @@
 
 import { personalInfo, socialLinks } from '@/data/portfolio'
 import { Mail, Github, Linkedin, Download } from 'lucide-react'
-import { AnimatedGridPattern } from '@/components/ui/animated-grid-pattern'
-import { ShimmerButton } from '@/components/ui/shimmer-button'
+import { AnimatedGridPattern } from '@/components/ui/AnimatedGridPattern'
+import { ShimmerButton } from '@/components/ui/ShimmerButton'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/components/LanguageProvider'
 import { TypingAnimation } from '@/components/ui/TypingAnimation'
@@ -15,7 +15,7 @@ const iconMap: Record<string, any> = {
 }
 
 export default function HeroSection() {
-  const { t } = useLanguage()
+  const { translate } = useLanguage()
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Animated Background */}
@@ -51,7 +51,7 @@ export default function HeroSection() {
         />
         <p className='text-xl md:text-2xl text-muted-foreground mb-6'>{personalInfo.role}</p>
         <p className='text-lg md:text-xl text-muted-foreground/80 max-w-2xl mx-auto mb-12'>
-          {t('hero.tagline')}
+          {translate('hero.tagline')}
         </p>
 
         {/* CTA Buttons */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
             onClick={() => (window.location.href = `mailto:${personalInfo.email}`)}
           >
             <Mail className='mr-2 h-4 w-4' />
-            <span>{t('hero.contact')}</span>
+            <span>{translate('hero.contact')}</span>
           </ShimmerButton>
 
           <a
@@ -69,7 +69,7 @@ export default function HeroSection() {
             className='inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium border border-border bg-background hover:bg-accent transition-colors'
           >
             <Download className='mr-2 h-4 w-4' />
-            {t('hero.download')}
+            {translate('hero.download')}
           </a>
         </div>
 

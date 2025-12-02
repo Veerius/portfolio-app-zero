@@ -3,13 +3,13 @@
 import { experiences } from '@/data/portfolio'
 import { motion } from 'framer-motion'
 import { Briefcase } from 'lucide-react'
-import { Meteors } from '@/components/ui/meteors'
+import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 import { calculateDuration } from '@/lib/date-utils'
 import { cn } from '@/lib/utils'
 
 export default function ExperienceSection() {
-  const { t, language } = useLanguage()
+  const { translate, language } = useLanguage()
 
   return (
     <section className='relative py-24 px-6 max-w-5xl mx-auto overflow-hidden' id='experience'>
@@ -23,8 +23,8 @@ export default function ExperienceSection() {
         transition={{ duration: 0.5 }}
         className='relative z-10'
       >
-        <h2 className='text-4xl md:text-5xl font-bold mb-4'>{t('experience.title')}</h2>
-        <p className='text-lg text-muted-foreground mb-12'>{t('experience.subtitle')}</p>
+        <h2 className='text-4xl md:text-5xl font-bold mb-4'>{translate('experience.title')}</h2>
+        <p className='text-lg text-muted-foreground mb-12'>{translate('experience.subtitle')}</p>
       </motion.div>
 
       <div className='relative z-10 ml-4'>
@@ -73,7 +73,7 @@ export default function ExperienceSection() {
                 </div>
                 {exp.current && (
                   <span className='px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary'>
-                    {t('experience.current')}
+                    {translate('experience.current')}
                   </span>
                 )}
               </div>

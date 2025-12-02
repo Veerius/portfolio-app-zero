@@ -1,17 +1,17 @@
 'use client'
 
-import { projects } from '@/data/portfolio'
+import { projects, projectCategories } from '@/data/portfolio'
 import { BentoGrid, BentoCard } from '@/components/BentoGrid'
 import { ExternalLink, Github, ArrowLeft } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { BorderBeam } from '@/components/ui/border-beam'
-import { Meteors } from '@/components/ui/meteors'
+import { BorderBeam } from '@/components/ui/BorderBeam'
+import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 import Link from 'next/link'
 import { useState, useMemo } from 'react'
 
 export default function AllProjectsPage() {
-  const { t, language } = useLanguage()
+  const { translate, language } = useLanguage()
   const [activeFilter, setActiveFilter] = useState<string>('all')
 
   // Get unique categories from projects
@@ -26,17 +26,9 @@ export default function AllProjectsPage() {
     return projects.filter((p) => p.category === activeFilter)
   }, [activeFilter])
 
-  // Category display names
+  // Get category display name from projectCategories
   const getCategoryName = (category: string) => {
-    const names: Record<string, { es: string; en: string }> = {
-      all: { es: 'Todos', en: 'All' },
-      'C#': { es: 'C#', en: 'C#' },
-      PHP: { es: 'PHP', en: 'PHP' },
-      BDO: { es: 'Bases de Datos', en: 'Databases' },
-      Linux: { es: 'Linux', en: 'Linux' },
-      ERP: { es: 'ERP', en: 'ERP' },
-    }
-    return names[category]?.[language] || category
+    return projectCategories[category]?.[language] || category
   }
 
   return (
@@ -52,7 +44,7 @@ export default function AllProjectsPage() {
             className='inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8'
           >
             <ArrowLeft className='h-4 w-4' />
-            {t('projectsPage.back')}
+            {translate('projectsPage.back')}
           </Link>
 
           {/* Page Header */}
@@ -62,8 +54,8 @@ export default function AllProjectsPage() {
             transition={{ duration: 0.5 }}
             className='mb-12'
           >
-            <h1 className='text-5xl md:text-6xl font-bold mb-4'>{t('projectsPage.title')}</h1>
-            <p className='text-xl text-muted-foreground'>{t('projectsPage.subtitle')}</p>
+            <h1 className='text-5xl md:text-6xl font-bold mb-4'>{translate('projectsPage.title')}</h1>
+            <p className='text-xl text-muted-foreground'>{translate('projectsPage.subtitle')}</p>
           </motion.div>
 
           {/* Filter Buttons */}
@@ -154,7 +146,7 @@ export default function AllProjectsPage() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <Github className='h-4 w-4 mr-1' />
-                        {t('projects.code')}
+                        {translate('projects.code')}
                       </a>
                     )}
                     {project.liveUrl && (
@@ -166,7 +158,7 @@ export default function AllProjectsPage() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <ExternalLink className='h-4 w-4 mr-1' />
-                        {t('projects.demo')}
+                        {translate('projects.demo')}
                       </a>
                     )}
                   </div>

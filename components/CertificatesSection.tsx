@@ -4,7 +4,7 @@ import { certificates } from '@/data/portfolio'
 import { BentoGrid, BentoCard } from '@/components/BentoGrid'
 import { Award, ExternalLink } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Meteors } from '@/components/ui/meteors'
+import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 
 export default function CertificatesSection() {

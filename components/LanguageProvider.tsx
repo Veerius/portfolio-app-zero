@@ -7,7 +7,7 @@ type Language = 'en' | 'es'
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  translate: (key: string) => string
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -137,12 +137,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('language', language)
   }, [language])
 
-  const t = (key: string): string => {
+  const translate = (key: string): string => {
     return translations[language][key as keyof typeof translations.en] || key
   }
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, translate }}>
       {children}
     </LanguageContext.Provider>
   )

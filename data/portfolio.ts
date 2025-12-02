@@ -28,6 +28,16 @@ export const socialLinks: SocialLink[] = [
     },
 ];
 
+export const projectCategories: Record<string, { es: string; en: string }> = {
+    all: { es: 'Todos', en: 'All' },
+    'C#': { es: 'C#', en: 'C#' },
+    PHP: { es: 'PHP', en: 'PHP' },
+    BDO: { es: 'Bases de Datos', en: 'Databases' },
+    Linux: { es: 'Linux', en: 'Linux' },
+    ERP: { es: 'ERP', en: 'ERP' },
+};
+
+
 export const projects: Project[] = [
     {
         slug: 'proyecto-terik',
@@ -254,14 +264,14 @@ export const certificates: Certificate[] = [
 export const education: Education[] = [
     {
         id: '1',
-        degree: 'Ciclo Superior en Desarrollo de Aplicaciones Web',
-        degreeEn: 'Higher Degree in Web Application Development',
+        degree: 'Ciclo Superior en Desarrollo de Aplicaciones Multiplataformas',
+        degreeEn: 'Higher Degree in Multiplatform Application Development',
         institution: 'IES El Rincón',
         duration: 'Sep 2017 - Jun 2019',
         startDate: '2017-09',
         endDate: '2019-06',
-        description: 'Formación especializada en desarrollo de aplicaciones web, incluyendo frontend, backend, bases de datos y despliegue de aplicaciones.',
-        descriptionEn: 'Specialized training in web application development, including frontend, backend, databases, and application deployment.',
+        description: 'Formación especializada en desarrollo de aplicaciones multiplataforma, incluyendo frontend, backend, bases de datos y despliegue de aplicaciones.',
+        descriptionEn: 'Specialized training in multiplatform application development, including frontend, backend, databases, and application deployment.',
         current: false,
     },
     {

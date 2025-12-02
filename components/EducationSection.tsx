@@ -3,18 +3,18 @@
 import { education } from '@/data/portfolio'
 import { useLanguage } from './LanguageProvider'
 import { GraduationCap, Calendar } from 'lucide-react'
-import { Meteors } from './ui/meteors'
+import { Meteors } from './ui/Meteors'
 
 export default function EducationSection() {
-  const { language, t } = useLanguage()
+  const { language, translate } = useLanguage()
 
   return (
     <section id='education' className='relative py-20 px-6 overflow-hidden'>
       <Meteors number={20} />
       <div className='max-w-4xl mx-auto relative z-10'>
         <div className='text-center mb-12'>
-          <h2 className='text-4xl font-bold mb-4'>{t('education.title')}</h2>
-          <p className='text-muted-foreground'>{t('education.subtitle')}</p>
+          <h2 className='text-4xl font-bold mb-4'>{translate('education.title')}</h2>
+          <p className='text-muted-foreground'>{translate('education.subtitle')}</p>
         </div>
 
         <div className='space-y-8'>

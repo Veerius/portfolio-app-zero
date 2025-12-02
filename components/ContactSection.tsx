@@ -3,8 +3,8 @@
 import { personalInfo, socialLinks } from '@/data/portfolio'
 import { Mail, Github, Linkedin } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { ShimmerButton } from '@/components/ui/shimmer-button'
-import { Meteors } from '@/components/ui/meteors'
+import { ShimmerButton } from '@/components/ui/ShimmerButton'
+import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 
 const iconMap: Record<string, any> = {
@@ -14,7 +14,7 @@ const iconMap: Record<string, any> = {
 }
 
 export default function ContactSection() {
-  const { t } = useLanguage()
+  const { translate } = useLanguage()
 
   return (
     <section className='relative py-24 px-6 max-w-4xl mx-auto overflow-hidden' id='contact'>
@@ -28,8 +28,8 @@ export default function ContactSection() {
         transition={{ duration: 0.5 }}
         className='relative z-10'
       >
-        <h2 className='text-4xl md:text-5xl font-bold mb-4 text-center'>{t('contact.title')}</h2>
-        <p className='text-lg text-muted-foreground mb-12 text-center'>{t('contact.subtitle')}</p>
+        <h2 className='text-4xl md:text-5xl font-bold mb-4 text-center'>{translate('contact.title')}</h2>
+        <p className='text-lg text-muted-foreground mb-12 text-center'>{translate('contact.subtitle')}</p>
       </motion.div>
 
       <motion.div
