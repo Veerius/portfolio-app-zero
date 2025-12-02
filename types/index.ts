@@ -12,6 +12,8 @@ export interface Project {
   titleEn?: string;
   descriptionEn?: string;
   longDescriptionEn?: string;
+  category: string;
+  tags: string[];
 }
 
 export interface Experience {
