@@ -9,7 +9,7 @@ import { Meteors } from "@/components/ui/meteors";
 import { useLanguage } from "@/components/LanguageProvider";
 import Link from "next/link";
 
-const PROJECTS_TO_SHOW = 4; // Show only 4 projects on home page
+const PROJECTS_TO_SHOW = 3;
 
 export default function ProjectsSection() {
   const { t, language } = useLanguage();
