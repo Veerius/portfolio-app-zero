@@ -1,38 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio App Zero
 
-## Getting Started
+Un portafolio moderno, minimalista y de alto rendimiento construido con las últimas tecnologías web. Diseñado para mostrar proyectos, habilidades y experiencia profesional con una experiencia de usuario fluida y atractiva.
 
-First, run the development server:
+![Portfolio Preview](/public/og-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Características Principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Diseño Moderno y Responsivo**: Interfaz limpia adaptada a todos los dispositivos.
+- **Internacionalización (i18n)**: Soporte completo para Español e Inglés.
+- **Modo Oscuro/Claro**: Cambio de tema automático (según sistema) o manual.
+- **Animaciones Suaves**: Transiciones fluidas y efectos visuales con Framer Motion y Magic UI.
+- **Filtrado de Proyectos**: Organización dinámica de proyectos por categorías.
+- **Exportación Estática**: Optimizado para despliegue en GitHub Pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tecnologías Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
+- **Estilos**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animaciones**: [Framer Motion](https://www.framer.com/motion/)
+- **Componentes UI**: [Magic UI](https://magicui.design/) & [Lucide React](https://lucide.dev/)
+- **Gestor de Paquetes**: [pnpm](https://pnpm.io/)
 
-## Learn More
+## 🚀 Comenzando
 
-To learn more about Next.js, take a look at the following resources:
+Sigue estos pasos para ejecutar el proyecto localmente:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerrequisitos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js 18+ instalado
+- pnpm instalado (`npm install -g pnpm`)
 
-## Deploy on Vercel
+### Instalación
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Clona el repositorio:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# portfolio-app-zero
-# portfolio-app-zero
+    ```bash
+    git clone https://github.com/tu-usuario/portfolio-app-zero.git
+    cd portfolio-app-zero
+    ```
+
+2.  Instala las dependencias:
+
+    ```bash
+    pnpm install
+    ```
+
+3.  Inicia el servidor de desarrollo:
+
+    ```bash
+    pnpm run dev
+    ```
+
+4.  Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## 📦 Despliegue
+
+Este proyecto está configurado para desplegarse automáticamente en **GitHub Pages** utilizando GitHub Actions.
+
+### Configuración de GitHub Pages
+
+1.  Asegúrate de que el repositorio se llame `portfolio-app-zero` (o actualiza el `basePath` en `next.config.ts`).
+2.  Ve a **Settings > Pages** en tu repositorio de GitHub.
+3.  En **Source**, selecciona **GitHub Actions**.
+4.  Haz un push a la rama `main` y el despliegue comenzará automáticamente.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Siéntete libre de usarlo como inspiración para tu propio portafolio.
+
+---
+
+Desarrollado con ❤️ por [Tarik Silva Peña](https://github.com/Veerius)
