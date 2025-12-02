@@ -2,8 +2,6 @@
 
 Un portafolio moderno, minimalista y de alto rendimiento construido con las últimas tecnologías web. Diseñado para mostrar proyectos, habilidades y experiencia profesional con una experiencia de usuario fluida y atractiva.
 
-![Portfolio Preview](/public/og-image.png)
-
 ## ✨ Características Principales
 
 - **Diseño Moderno y Responsivo**: Interfaz limpia adaptada a todos los dispositivos.
