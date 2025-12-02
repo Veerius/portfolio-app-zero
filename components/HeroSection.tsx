@@ -74,24 +74,6 @@ export default function HeroSection() {
                     </a>
                 </div>
 
-                {/* Navigation Shortcuts */}
-                <div className="flex flex-wrap gap-4 justify-center items-center mb-12">
-                    <Button
-                        variant="outline"
-                        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="rounded-full"
-                    >
-                        {t('nav.projects')}
-                    </Button>
-                    <Button
-                        variant="outline"
-                        onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="rounded-full"
-                    >
-                        {t('nav.experience')}
-                    </Button>
-                </div>
-
                 {/* Social Links */}
                 <div className="flex gap-6 justify-center">
                     {socialLinks.map((link) => {

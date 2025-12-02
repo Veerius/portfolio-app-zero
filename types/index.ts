@@ -56,5 +56,17 @@ export interface Certificate {
   issuer: string;
   date: string;
   credentialUrl?: string;
-  image?: string;
+}
+
+export interface Education {
+  id: string;
+  degree: string;
+  degreeEn?: string;
+  institution: string;
+  duration: string;
+  startDate: string; // Format: 'YYYY-MM'
+  endDate?: string; // Format: 'YYYY-MM' or undefined if current
+  description?: string;
+  descriptionEn?: string;
+  current?: boolean;
 }

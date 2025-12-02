@@ -20,6 +20,13 @@ const translations = {
         'hero.contact': 'Contact Me',
         'hero.download': 'Download CV',
 
+        // Navigation
+        'nav.about': 'About',
+        'nav.projects': 'Projects',
+        'nav.experience': 'Experience',
+        'nav.education': 'Education',
+        'nav.contact': 'Contact',
+
         // About Section
         'about.title': 'About Me',
         'about.bio': 'I am a full-stack developer with over 5 years of combined experience in software development, web applications, and system administration. I have worked in both local and international environments, contributing to backend, frontend, and infrastructure-related projects. My background includes modern technologies, SQL databases, and development best practices, with a strong focus on efficiency, code quality, and continuous improvement.',
@@ -36,6 +43,10 @@ const translations = {
         'experience.title': 'Experience',
         'experience.subtitle': 'My professional journey',
         'experience.current': 'Current',
+
+        // Education Section
+        'education.title': 'Education',
+        'education.subtitle': 'My academic background',
 
         // Contact Section
         'contact.title': 'Get In Touch',
@@ -57,6 +68,13 @@ const translations = {
         'hero.contact': 'Contáctame',
         'hero.download': 'Descargar CV',
 
+        // Navigation
+        'nav.about': 'Sobre Mí',
+        'nav.projects': 'Proyectos',
+        'nav.experience': 'Experiencia',
+        'nav.education': 'Educación',
+        'nav.contact': 'Contacto',
+
         // About Section
         'about.title': 'Sobre Mí',
         'about.bio': 'Soy un desarrollador full-stack con más de 5 años de experiencia combinada en desarrollo de software, aplicaciones web y administración de sistemas. He trabajado en entornos locales e internacionales, contribuyendo a proyectos de backend, frontend, gestión de infraestructura y soporte técnico. Mi trayectoria incluye el uso de tecnologías modernas, bases de datos SQL y buenas prácticas de desarrollo, con un enfoque en la eficiencia, la calidad del código y la mejora continua.',
@@ -73,6 +91,10 @@ const translations = {
         'experience.title': 'Experiencia',
         'experience.subtitle': 'Mi trayectoria profesional',
         'experience.current': 'Actual',
+
+        // Education Section
+        'education.title': 'Educación',
+        'education.subtitle': 'Mi formación académica',
 
         // Contact Section
         'contact.title': 'Ponte en Contacto',

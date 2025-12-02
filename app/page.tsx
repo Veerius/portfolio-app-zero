@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ExperienceSection from '@/components/ExperienceSection';
+import EducationSection from '@/components/EducationSection';
 import CertificatesSection from '@/components/CertificatesSection';
 import ContactSection from '@/components/ContactSection';
 import { useLanguage } from '@/components/LanguageProvider';
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutSection />
       <ProjectsSection />
       <ExperienceSection />
+      <EducationSection />
       <CertificatesSection />
       <ContactSection />
 

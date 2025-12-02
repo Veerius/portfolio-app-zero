@@ -1,4 +1,4 @@
-import { PersonalInfo, Project, Experience, Skill, SocialLink, Certificate } from '@/types';
+import { PersonalInfo, Project, Experience, Skill, SocialLink, Certificate, Education } from '@/types';
 
 export const personalInfo: PersonalInfo = {
     name: 'Tarik Silva Peña',
@@ -106,11 +106,11 @@ export const experiences: Experience[] = [
     {
         id: '2',
         company: 'Grupo Pérez Moreno',
-        role: 'Administrador de Sistemas',
-        roleEn: 'Systems Administrator',
+        role: 'Soporte TI',
+        roleEn: 'IT Support',
         duration: 'Oct 2020 - Ene 2021',
-        description: 'Administración de sistemas e infraestructura IT. Gestión de incidencias técnicas, mantenimiento de servidores y soporte a usuarios para garantizar la continuidad operativa.',
-        descriptionEn: 'Systems administration and IT infrastructure. Management of technical incidents, server maintenance, and user support to ensure operational continuity.',
+        description: 'Soporte técnico y mantenimiento de sistemas e infraestructura IT. Gestión de incidencias técnicas, mantenimiento de servidores y soporte a usuarios para garantizar la continuidad operativa.',
+        descriptionEn: 'Technical support and maintenance of systems and IT infrastructure. Management of technical incidents, server maintenance, and user support to ensure operational continuity.',
         current: false,
         startDate: '2020-10',
         endDate: '2021-01',
@@ -170,26 +170,50 @@ export const skills: Skill[] = [
 export const certificates: Certificate[] = [
     {
         id: '1',
-        name: 'React - The Complete Guide',
+        name: 'Rust Programming Language',
         issuer: 'Udemy',
-        date: '2023',
-        credentialUrl: '#',
-        image: '/certificates/react.jpg',
+        date: '2021',
+        credentialUrl: 'https://www.udemy.com/certificate/UC-35ce3366-da10-437d-aa80-55ce9fbed1ee/',
     },
     {
         id: '2',
-        name: 'Advanced TypeScript',
-        issuer: 'Frontend Masters',
+        name: 'IT Essentials',
+        issuer: 'Cisco',
         date: '2023',
         credentialUrl: '#',
-        image: '/certificates/typescript.jpg',
     },
     {
         id: '3',
-        name: 'AWS Certified Developer',
-        issuer: 'Amazon Web Services',
+        name: 'CCNA',
+        issuer: 'Cisco',
         date: '2022',
         credentialUrl: '#',
-        image: '/certificates/aws.jpg',
+    },
+];
+
+export const education: Education[] = [
+    {
+        id: '1',
+        degree: 'Ciclo Superior en Desarrollo de Aplicaciones Web',
+        degreeEn: 'Higher Degree in Web Application Development',
+        institution: 'IES El Rincón',
+        duration: 'Sep 2017 - Jun 2019',
+        startDate: '2017-09',
+        endDate: '2019-06',
+        description: 'Formación especializada en desarrollo de aplicaciones web, incluyendo frontend, backend, bases de datos y despliegue de aplicaciones.',
+        descriptionEn: 'Specialized training in web application development, including frontend, backend, databases, and application deployment.',
+        current: false,
+    },
+    {
+        id: '2',
+        degree: 'Ciclo Superior en Administración de Sistemas Informáticos en Red',
+        degreeEn: 'Higher Degree in Network Systems Administration',
+        institution: 'IES Siete Palmas',
+        duration: 'Sep 2015 - Jun 2017',
+        startDate: '2015-09',
+        endDate: '2017-06',
+        description: 'Formación en administración de sistemas, redes, seguridad informática y gestión de infraestructuras IT.',
+        descriptionEn: 'Training in systems administration, networks, IT security, and IT infrastructure management.',
+        current: false,
     },
 ];
