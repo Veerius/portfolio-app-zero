@@ -8,11 +8,13 @@ import { BorderBeam } from '@/components/ui/BorderBeam'
 import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const PROJECTS_TO_SHOW = 3
 
 export default function ProjectsSection() {
   const { translate, language } = useLanguage()
+  const router = useRouter()
   const featuredProjects = projects.slice(0, PROJECTS_TO_SHOW)
   const hasMoreProjects = projects.length > PROJECTS_TO_SHOW
 
@@ -43,7 +45,7 @@ export default function ProjectsSection() {
             <BentoCard
               size={project.size || 'medium'}
               className='cursor-pointer hover:border-primary/50 transition-all h-full'
-              onClick={() => (window.location.href = `/projects/${project.slug}`)}
+              onClick={() => router.push(`/projects/${project.slug}`)}
             >
               {project.featured && <BorderBeam size={250} duration={12} delay={9} />}
 
