@@ -9,9 +9,11 @@ import { Meteors } from '@/components/ui/Meteors'
 import { useLanguage } from '@/components/LanguageProvider'
 import Link from 'next/link'
 import { useState, useMemo } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function AllProjectsPage() {
   const { translate, language } = useLanguage()
+  const router = useRouter()
   const [activeFilter, setActiveFilter] = useState<string>('all')
 
   // Get unique categories from projects
@@ -54,7 +56,9 @@ export default function AllProjectsPage() {
             transition={{ duration: 0.5 }}
             className='mb-12'
           >
-            <h1 className='text-5xl md:text-6xl font-bold mb-4'>{translate('projectsPage.title')}</h1>
+            <h1 className='text-5xl md:text-6xl font-bold mb-4'>
+              {translate('projectsPage.title')}
+            </h1>
             <p className='text-xl text-muted-foreground'>{translate('projectsPage.subtitle')}</p>
           </motion.div>
 
@@ -92,7 +96,7 @@ export default function AllProjectsPage() {
                 <BentoCard
                   size={project.size || 'medium'}
                   className='cursor-pointer hover:border-primary/50 transition-all h-full'
-                  onClick={() => (window.location.href = `/projects/${project.slug}`)}
+                  onClick={() => router.push(`/projects/${project.slug}`)}
                 >
                   {project.featured && <BorderBeam size={250} duration={12} delay={9} />}
 
