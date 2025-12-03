@@ -2,14 +2,14 @@ import { projects } from '@/data/portfolio'
 import { notFound } from 'next/navigation'
 import ProjectContent from '@/components/ProjectContent'
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }))
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const project = projects.find((p) => p.slug === slug)
 
   if (!project) {
